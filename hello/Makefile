@@ -7,7 +7,7 @@ install: $(TARGET_APP)
 	install -m 755 $(TARGET_APP) $(DESTDIR)$(bindir)
 
 $(TARGET_APP): *.c
-	$(CC) -o $@ $^
+	$(CC) $(LDFLAGS) -o $@ $^
 
 .PHONY: clean
 clean:
